@@ -795,13 +795,9 @@ See `org-capture-templates' for more information."
               ))))
 
     (add-to-list 'org-agenda-custom-commands
-                 '("r" "Daily Agenda Review"
-                   ((agenda "" ((org-agenda-overriding-header "今日记录")
-                                (org-agenda-span 'day)
-                                (org-agenda-show-log 'clockcheck)
-                                (org-agenda-start-with-log-mode nil)
-                                (org-agenda-log-mode-items '(closed clock state))
-                                (org-agenda-clockreport-mode t))))))
+                 '("r" "Last Week Agenda Review"
+                   ((agenda "" ((org-agenda-overriding-header "Tasks Completed:")
+                                (tags "TODO=\"DONE\"&CLOSED>=\"<-1w>\""))))))
 
 
     (defvar zilongshanren-website-html-preamble

@@ -64,8 +64,8 @@
 (use-package typescript-ts-mode
   :init
   ;; Associate cts files with `typescript-ts-mode'.
-  (add-to-list 'auto-mode-alist (cons "\\.cts\\'" 'typescript-ts-mode))
-  (add-hook 'typescript-ts-mode-hook #'eglot-ensure)
+  ;; (add-to-list 'auto-mode-alist (cons "\\.cts\\'" 'typescript-ts-mode))
+  ;; (add-hook 'typescript-ts-mode-hook #'eglot-ensure)
   :custom (typescript-ts-mode-indent-offset 4)
   :ensure nil
   :config
