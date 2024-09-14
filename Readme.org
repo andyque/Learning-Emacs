@@ -6,7 +6,7 @@
 *** 版本要求 emacs-mac port 29
 #+begin_src sh
 brew tap railwaycat/emacsmacport
-brew install emacs-mac --with-rsvg  --with-imagemagick --with-dbus
+brew install emacs-mac --with-librsvg  --with-imagemagick --with-dbus
 #+end_src
 
 *** 拷贝到 Application 目录，这里使用的是 Alias （M1 芯片）
