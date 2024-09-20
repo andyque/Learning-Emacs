@@ -96,7 +96,8 @@
       (setq ispell-program-name "aspell"))
   (dolist (hook '(text-mode-hook))
     (add-hook hook (lambda () (flyspell-mode 1))))
-  (ispell-change-dictionary "american" t))
+  (ispell-change-dictionary "american" t)
+  (setq text-mode-ispell-word-completion nil))
 
 (use-package corfu-english-helper
   :ensure nil
