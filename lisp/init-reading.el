@@ -38,16 +38,16 @@
   :bind
   (("<f9>" . distraction-free)))
 
-(use-package pdf-tools
-  :ensure t
-  :demand t
-  :init
-  (progn
-    (setq-default pdf-view-display-size 'fit-page))
-  :config
-  (pdf-tools-install-noverify)
-;  (define-key pdf-annot-minor-mode-map (kbd "C-c C-y") 'youdao-dictionary-search-async)
-  )
+;; (use-package pdf-tools
+;;   :ensure t
+;;   :demand t
+;;   :init
+;;   (progn
+;;     (setq-default pdf-view-display-size 'fit-page))
+;;   :config
+;;   (pdf-tools-install-noverify)
+;; ;  (define-key pdf-annot-minor-mode-map (kbd "C-c C-y") 'youdao-dictionary-search-async)
+;;   )
 
 (use-package org-noter
   :ensure t
