@@ -1,12 +1,13 @@
 (require 'lsp-bridge)
-(setq lsp-bridge-enable-log nil)
+(require 'yasnippet)
+(yas-global-mode 1)
+
 (global-lsp-bridge-mode)
 
 (defun my/enable-lsp-bridge ()
   (interactive)
   (progn
-    ;; (corfu-mode -1)
-    ;; (lsp-bridge-mode)
+    (corfu-mode -1)
 
     (setq acm-candidate-match-function 'orderless-flex)
 
