@@ -183,7 +183,7 @@
   :init
   (quickrun-add-command "c++/c1z"
     '((:command . "g++")
-      (:exec . ("%c -std=c++1z %o -o %e %s"
+      (:exec . ("%c -std=c++20 %o -o %e %s"
                 "%e %a"))
       (:remove . ("%e")))
     :default "c++")
