@@ -213,12 +213,26 @@
    consult-narrow-key "<"
    consult-line-numbers-widen t
    consult-async-min-input 2
-   consult-async-refresh-delay  0.15
+   consult-async-refresh-delay 0.15
    consult-async-input-throttle 0.2
    consult-async-input-debounce 0.1
    consult-line-start-from-top t)
 
 
+  (defun my-project-root ()
+    (when-let ((project (project-current nil)))
+      (if (fboundp #'project-root)
+          (project-root project)
+        (car (project-roots project)))))
+
+  (define-advice consult--buffer-pair (:around (_ buffer) show-path)
+    "Also show path for file buffers so the user can filter them by path."
+    (let ((dir (or (my-project-root) default-directory)))
+      (if-let ((path (buffer-file-name buffer)))
+          (progn (when (file-in-directory-p path dir)
+                   (setq path (file-relative-name path dir)))
+                 (cons path buffer))
+        (cons (buffer-name buffer) buffer))))
 
   (consult-customize
    consult-theme
