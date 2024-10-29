@@ -115,7 +115,8 @@
 (require 'init-syntaxcheck)
 (require 'init-snippets)
 
-(require 'init-lsp)
+;; (require 'init-lsp)
+(require 'init-lspbridge)
 
 ;; Frameworks
 ;; yaml init , shell etc
@@ -141,6 +142,7 @@
 
 ;; programming
 (require 'init-programming)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init.el ends here
 (put 'dired-find-alternate-file 'disabled nil)
